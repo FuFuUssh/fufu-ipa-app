@@ -1,0 +1,64 @@
+.toasts-container {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    z-index: 20;
+}
+
+.toast {
+    width: 250px;
+    background-color: white;
+}
+
+.toast-header {
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.toast-header .close-btn {
+    top: 0.5rem;
+}
+
+.toast-content {
+    padding: 1rem 1rem;
+}
+
+.toast-content .progress-bar {
+    height: 30px;
+    background-color: hsl(200, 100%, 50%);
+    border-radius: 0.5rem;
+    width: calc(attr(data-progress) * 1%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.toast-content .progress-bar.error {
+    background-color: hsl(0, 70%, 50%);
+}
+
+.toast.show {
+    animation: fadeIn 300ms ease-in-out forwards;
+}
+
+.toast.disappear {
+    display: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

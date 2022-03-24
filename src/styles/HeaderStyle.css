@@ -1,0 +1,157 @@
+.header {
+    background-color: var(--theme-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 7rem;
+    overflow: clip;
+}
+
+.logo-container {
+    height: 65px;
+    width: 135px;
+}
+
+.nyan-ipa-logo {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.custom-search-bar {
+    width: 35vw;
+    height: 35px;
+    border: 1px solid white;
+    padding: 0rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #5ca1ff;
+}
+
+.search-icon {
+    font-size: 1.25rem;
+    color: white;
+}
+
+.search-bar-input {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    font-size: 1.15rem;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.search-btn {
+    padding: 0.5rem 1rem;
+    background-color: #01576d;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 150ms ease;
+}
+
+.search-btn:hover {
+    background-color: #028fb3;
+}
+
+.profile-container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-icon {
+    font-size: 2rem;
+    color: white;
+    transition: color 150ms ease;
+}
+
+.profile-text {
+    color: white;
+    font-size: 1rem;
+    transition: color 150ms ease;
+}
+
+.profile-container:hover .profile-icon, .profile-container:hover .profile-text {
+    color: rgb(231, 231, 231);
+}
+
+@media screen and (max-width: 995px) {
+    .header {
+        padding: 0.75rem 2rem;
+    }
+
+    .search-bar-container {
+        width: 50%;
+    }
+
+    .custom-search-bar { 
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .header .logo-container {
+        height: 55px;
+        width: 105px;
+    }
+
+    .profile-container { 
+        flex-direction: column;
+    }
+
+    .profile-icon {
+        font-size: 1.5rem;
+    }
+
+    .search-icon {
+        font-size: 1rem;
+    }
+
+    .custom-search-bar {
+        padding: 0rem 0.5rem;
+        gap: 0.25rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .header {
+        padding: 0.75rem 1rem;
+    }
+
+    .profile-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .header {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .header .logo-container {
+        height: 35px;
+        width: 75px;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .header .profile-text {
+        font-size: 0.65rem;
+    }
+}

@@ -1,0 +1,289 @@
+.filter-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 7rem;
+    background-color: var(--secondary-color);
+    position: relative;
+}
+
+.filters-container, .sub-btn-grids {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    z-index: 10;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    color: white;
+    font-size: 1rem;
+    position: relative;
+}
+
+.filter-btn::after {
+    content: "";
+    position: absolute;
+    bottom: -15%;
+    left: -2%;
+    width: 104%;
+    height: 1px;
+    background-color: #fff;
+
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+}
+
+.filter-btn.active {
+    font-weight: bold;
+}
+
+.filter-btn.active::after {
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.filter-card {
+    position: absolute;
+    top: 100%;
+    left: 7rem;
+    padding: 1rem 2rem;
+    gap: 3rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    transition: 200ms ease-in-out;
+}
+
+
+.filter-bar.open .filter-card.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.aspects {
+    display: flex;
+    flex-direction: column;
+    gap: 2.15rem;
+    position: relative;
+}
+
+.aspects::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: black;
+    opacity: 0.2;
+    right: -1.5rem;
+}
+
+.aspect-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.aspect-items-container {
+    display: flex; 
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.aspect-items li button {
+    --brightness: 74%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    color: white;
+
+    transition: 150ms ease-in-out;
+}
+
+.aspect-items li button:hover {
+    opacity: 0.7;
+    transform: translateY(-3px);
+}
+
+.aspect-items.red li button {
+    background-color: hsl(0, 100%, var(--brightness));
+}
+
+.aspect-items.blue li button {
+    background-color: hsl(201, 100%, var(--brightness));
+}
+
+.aspect-items.green li button {
+    background-color: hsl(120, 100%, var(--brightness));
+}
+
+.aspect-items.orange li button {
+    background-color: hsl(23, 100%, var(--brightness));
+}
+
+.aspect-items.purple li button {
+    background-color: hsl(287, 100%, var(--brightness));
+}
+
+.close-btn {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.2rem;
+}
+
+.aspect-items li.selected button {
+    --brightness: 20%;
+}
+
+.vowels-filters {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.monothong-dipthong-btn-grid {
+    text-align: left;
+    margin-right: auto;
+}
+
+.monothong-dipthong-btn-grid button {
+    position: relative;
+}
+
+.monothong-dipthong-btn-grid button::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: -2%;
+    width: 104%;
+    height: 1px;
+    background-color: #333;
+    opacity: 0.3;
+    transform: scale(0);
+    transition: transform 250ms;
+}
+
+.monothong-dipthong-btn-grid button:nth-child(2) {
+    margin-left: 20px;
+}
+
+.monothong-dipthong-btn-grid > button.active {
+    font-weight: bold;
+}
+
+.monothong-dipthong-btn-grid > button.active::after {
+    transform: scale(1);
+}
+
+.monothongs { 
+    display: flex;
+    gap: 3rem;
+}
+
+.dipthongs .aspects::after {
+    display: none;
+}
+
+.monothongs, .dipthongs {
+    display: none;
+}
+
+.monothongs.visible, .dipthongs.visible {
+    display: flex;
+}
+
+.aspect-vertical {
+    display: none;
+}
+
+/* .search-bar-container-button {
+    position: absolute;
+    bottom: 0.25rem;
+    left: 0.25rem;
+    width: 7rem;
+    height: 7rem;
+}
+ */
+
+
+@media screen and (max-width: 1150px ) {
+    .consonants-aspects-features {
+        display: none;
+    }
+
+    .aspect-vertical.consonant {
+        display: block;
+    }
+
+    .consonant-filters {
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 995px) {
+    .filter-bar {
+        padding: 0.75rem 2rem;
+    }
+
+    .filter-card {
+        left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .monothongs-aspect {
+        display: none;
+    }
+
+    .aspect-vertical.vowel {
+        display: block;
+    }
+
+    .monothongs {
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .reset-filter-btn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .filter-bar {
+        padding: 0.75rem 1rem;
+    }
+
+    .filters-container, .sub-btn-grids {
+        gap: 1.25rem;
+    }
+
+    .filter-btn {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .filter-bar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
