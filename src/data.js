@@ -13,10 +13,10 @@ const IPA_SOUNDS = [
             }
         },
         links: [
-            'https://firebasestorage.googleapis.com/v0/b/nyanipa-7da14.appspot.com/o/default%2Fp%2Fvideo-1.mp4?alt=media&token=76dc74bf-7576-43c2-8435-82d499cf5cc7',
-            'https://firebasestorage.googleapis.com/v0/b/nyanipa-7da14.appspot.com/o/default%2Fp%2Fvideo-2.mp4?alt=media&token=b14a38c6-95ed-4877-acee-f41ce3260e5a',
-            'https://firebasestorage.googleapis.com/v0/b/nyanipa-7da14.appspot.com/o/default%2Fp%2Fvideo-3.mp4?alt=media&token=b80fd266-323c-4459-a784-fd8e2ce1ed2a',
-            'https://firebasestorage.googleapis.com/v0/b/nyanipa-7da14.appspot.com/o/default%2Fp%2Fvideo-4.mp4?alt=media&token=a189e3d3-db1f-45bf-b96e-d7e506fc7f31'
+            'https://firebasestorage.googleapis.com/v0/b/fuipa-c461d.appspot.com/o/default%2Fvideo-1.mp4?alt=media&token=503c08f7-7ec8-4b00-ac4e-f8e38464ed61',
+            'https://firebasestorage.googleapis.com/v0/b/fuipa-c461d.appspot.com/o/default%2Fvideo-2.mp4?alt=media&token=8107b630-b19e-4fb2-8662-5e65c3f4e85c',
+            'https://firebasestorage.googleapis.com/v0/b/fuipa-c461d.appspot.com/o/default%2Fvideo-3.mp4?alt=media&token=5b4ebed5-0b82-4746-8e5d-7d28d666325b',
+            'https://firebasestorage.googleapis.com/v0/b/fuipa-c461d.appspot.com/o/default%2Fvideo-4.mp4?alt=media&token=52b29c68-4dee-4e84-b5d5-8eb111a35296'
         ],
         tags: ['p']
     },
