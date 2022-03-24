@@ -160,7 +160,7 @@ export default function FilterBar({ filterBarOpen, setFilterBarOpen }) {
                     <div className={`ipa-chart-outlayer ${chartOpen ? 'visible' : ''}`} onClick={handleChartClick}>
                         <div className="ipa-chart-container" >
                             <a 
-                                href="https://firebasestorage.googleapis.com/v0/b/nyanipa-7da14.appspot.com/o/ipa-chart%2Fipa-chart.jpg?alt=media&token=de5c7ed5-1dcf-40b7-830a-16c20a415207"
+                                href="https://firebasestorage.googleapis.com/v0/b/fuipa-c461d.appspot.com/o/ipa-chart%2Fipa-chart.jpg?alt=media&token=92b63986-d139-41cf-8ce0-73033d3a688b"
                                 target="_blank"
                                 rel="noreferrer"
                             >
