@@ -111,6 +111,10 @@
     animation: spinner 3s linear infinite ;
 }
 
+.sub-text {
+    margin-top: 1rem;
+}
+
 @keyframes spinner {
     100% {
         transform: rotate(360deg);
