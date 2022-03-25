@@ -3,7 +3,10 @@ const IPA_SOUNDS = [
     {
         id: 'p',
         name: 'p',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['p'],
+            words: ['park', 'sport', 'shop']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -13,17 +16,20 @@ const IPA_SOUNDS = [
             }
         },
         links: [
-            'https://firebasestorage.googleapis.com/v0/b/fuipa-c461d.appspot.com/o/default%2Fvideo-1.mp4?alt=media&token=503c08f7-7ec8-4b00-ac4e-f8e38464ed61',
-            'https://firebasestorage.googleapis.com/v0/b/fuipa-c461d.appspot.com/o/default%2Fvideo-2.mp4?alt=media&token=8107b630-b19e-4fb2-8662-5e65c3f4e85c',
-            'https://firebasestorage.googleapis.com/v0/b/fuipa-c461d.appspot.com/o/default%2Fvideo-3.mp4?alt=media&token=5b4ebed5-0b82-4746-8e5d-7d28d666325b',
-            'https://firebasestorage.googleapis.com/v0/b/fuipa-c461d.appspot.com/o/default%2Fvideo-4.mp4?alt=media&token=52b29c68-4dee-4e84-b5d5-8eb111a35296'
+            'https://firebasestorage.googleapis.com/v0/b/nyanipa-7da14.appspot.com/o/default%2Fp%2Fvideo-1.mp4?alt=media&token=76dc74bf-7576-43c2-8435-82d499cf5cc7',
+            'https://firebasestorage.googleapis.com/v0/b/nyanipa-7da14.appspot.com/o/default%2Fp%2Fvideo-2.mp4?alt=media&token=b14a38c6-95ed-4877-acee-f41ce3260e5a',
+            'https://firebasestorage.googleapis.com/v0/b/nyanipa-7da14.appspot.com/o/default%2Fp%2Fvideo-3.mp4?alt=media&token=b80fd266-323c-4459-a784-fd8e2ce1ed2a',
+            'https://firebasestorage.googleapis.com/v0/b/nyanipa-7da14.appspot.com/o/default%2Fp%2Fvideo-4.mp4?alt=media&token=a189e3d3-db1f-45bf-b96e-d7e506fc7f31'
         ],
         tags: ['p']
     },
     {
         id: 'b',
         name: 'b',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['b'],
+            words: ['boy', 'rob', 'brown']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -40,7 +46,10 @@ const IPA_SOUNDS = [
     {
         id: 'm',
         name: 'm',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['m'],
+            words: ['man', 'stamp', 'came']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -57,7 +66,10 @@ const IPA_SOUNDS = [
     {
         id: 't',
         name: 't',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['t'],
+            words: ['talk', 'strong', 'hot']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -74,7 +86,10 @@ const IPA_SOUNDS = [
     {
         id: 'd',
         name: 'd',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['d'],
+            words: ['dog', 'bad']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -91,7 +106,10 @@ const IPA_SOUNDS = [
     {
         id: 'n',
         name: 'n',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['n'],
+            words: ['nose', 'can', 'none']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -108,7 +126,10 @@ const IPA_SOUNDS = [
     {
         id: 'k',
         name: 'k',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['c', 'k'],
+            words: ['call', 'shock', 'car']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -125,7 +146,10 @@ const IPA_SOUNDS = [
     {
         id: 'g',
         name: 'g',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['g'],
+            words: ['go', 'bag', 'grey']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -142,7 +166,10 @@ const IPA_SOUNDS = [
     {
         id: 'ŋ',
         name: 'ŋ',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['ng', 'n'],
+            words: ['thing', 'sing', 'sink']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -159,7 +186,10 @@ const IPA_SOUNDS = [
     {
         id: 'f',
         name: 'f',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['f'],
+            words: ['fun', 'stuff']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -176,7 +206,10 @@ const IPA_SOUNDS = [
     {
         id: 'v',
         name: 'v',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['v'],
+            words: ['van', 'give']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -193,7 +226,10 @@ const IPA_SOUNDS = [
     {
         id: 's',
         name: 's',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['s'],
+            words: ['sing', 'kiss']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -210,7 +246,10 @@ const IPA_SOUNDS = [
     {
         id: 'z',
         name: 'z',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['z'],
+            words: ['zoo', 'buzz']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -227,7 +266,10 @@ const IPA_SOUNDS = [
     {
         id: 'θ',
         name: 'θ',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['th'],
+            words: ['throw', 'teeth']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -244,7 +286,10 @@ const IPA_SOUNDS = [
     {
         id: 'ð',
         name: 'ð',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['th'],
+            words: ['that', 'bathe']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -261,7 +306,10 @@ const IPA_SOUNDS = [
     {
         id: 'ʃ',
         name: 'ʃ',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['sh'],
+            words: ['sheep', 'dish']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -278,7 +326,10 @@ const IPA_SOUNDS = [
     {
         id: 'ʒ',
         name: 'ʒ',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['s', 'ge'],
+            words: ['vision', 'garage']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -295,7 +346,10 @@ const IPA_SOUNDS = [
     {
         id: 'tʃ',
         name: 'tʃ',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['ch'],
+            words: ['chicken', 'catch']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -312,7 +366,10 @@ const IPA_SOUNDS = [
     {
         id: 'dʒ',
         name: 'dʒ',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['ge', 'j'],
+            words: ['advantage', 'joke']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -329,7 +386,10 @@ const IPA_SOUNDS = [
     {
         id: 'l',
         name: 'l',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['l', 'll'],
+            words: ['log', 'tall']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -346,7 +406,10 @@ const IPA_SOUNDS = [
     {
         id: 'r',
         name: 'r',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['r'],
+            words: ['rock', 'rain']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -363,7 +426,10 @@ const IPA_SOUNDS = [
     {
         id: 'j',
         name: 'j',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['y'],
+            words: ['yolk', 'yellow']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -380,7 +446,10 @@ const IPA_SOUNDS = [
     {
         id: 'w',
         name: 'w',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['wh', 'w'],
+            words: ['what', 'win']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -397,7 +466,10 @@ const IPA_SOUNDS = [
     {
         id: 'h',
         name: 'h',
-        examples: ['Jack', 'judge'],
+        examples: {
+            lettersToMark: ['h'],
+            words: ['hair', 'hot']
+        },
         type: {
             name: 'consonant',
             features: {
@@ -431,7 +503,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
-        examples: ["It's free"],
+        examples: {
+            lettersToMark: ['ee', 'ea'],
+            words: ['teen', 'bean']
+        },
         tags: ['ee', 'ea']
     },
     {
@@ -453,6 +528,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['i'],
+            words: ['bin', 'sink']
+        },
         tags: ['i']
     },
     {
@@ -474,6 +553,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['e'],
+            words: ['ten', 'ben']
+        },
         tags: ['e']
     },
     {
@@ -495,6 +578,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['a'],
+            words: ['can', 'hand']
+        },
         tags: ['ae']
     },
     {
@@ -516,6 +603,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['oo', 'oe'],
+            words: ['shoot', 'shoe']
+        },
         tags: ['uu']
     },
     {
@@ -537,6 +628,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['oo', 'u'],
+            words: ['foot', 'put']
+        },
         tags: ['u']
     },
     {
@@ -558,6 +653,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['u'],
+            words: ['but', 'sun']
+        },
         tags: ['a', '^']
     },
     {
@@ -579,11 +678,15 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['a', 'o'],
+            words: ['tall', 'bore']
+        },
         tags: ['oo']
     },
     {
         id: "lax-o",
-        name: "ɔ:",
+        name: "ɒ",
         type: {
             name: "vowel",
             isDipthong: false,
@@ -600,6 +703,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['o'],
+            words: ['song', 'not']
+        },
         tags: ['o']
     },
     {
@@ -621,6 +728,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['a'],
+            words: ['car', 'bar']
+        },
         tags: ['aa']
     },
     {
@@ -642,6 +753,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['a', 'u'],
+            words: ['ago', 'support']
+        },
         tags: ['ur', 'er']
     },
     {
@@ -663,6 +778,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['ur'],
+            words: ['burn', 'turn']
+        },
         tags: ['err', 'urr']
     },
     // vowels - dipthongs
@@ -685,6 +804,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['ea', 'ee'],
+            words: ['tear', 'cheer']
+        },
         tags: ['ie']
     },
     {
@@ -706,6 +829,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['ea', 'a'],
+            words: ['bear', 'care']
+        },
         tags: ['ea']
     },
     {
@@ -727,6 +854,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['ou', 'u'],
+            words: ['tour', 'mature']
+        },
         tags: ['ua']
     },
     {
@@ -748,6 +879,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['a'],
+            words: ['chase', 'case']
+        },
         tags: ['ay', 'ei']
     },
     {
@@ -769,6 +904,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['oy', 'oi'],
+            words: ['toy', 'boil']
+        },
         tags: ['oi']
     },
     {
@@ -790,6 +929,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['ey', 'uy'],
+            words: ['eye', 'buy']
+        },
         tags: ['ai']
     },
     {
@@ -811,6 +954,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['ow', 'oa'],
+            words: ['snow', 'boat']
+        },
         tags: ['ou']
     },
     {
@@ -832,6 +979,10 @@ const IPA_SOUNDS = [
         links: [
             '', '', '', ''
         ],
+        examples: {
+            lettersToMark: ['ou'],
+            words: ['about', 'sound']
+        },
         tags: ['au', 'ao']
     },
 ]
