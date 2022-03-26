@@ -17,11 +17,6 @@ export default function Card({ soundId, name, examples, links}) {
         setOpenModal(false)
     }
 
-    words.forEach(word => {
-        const letters = word.split('')
-        console.log(letters)
-    })
-
     return (
         <div className="ipa-card-container" onClick={handleCardClick}>
             <div className="ipa-card card">
@@ -30,27 +25,31 @@ export default function Card({ soundId, name, examples, links}) {
                     <div className="examples-container">
                         {words?.map((word, wordIndex) => {
                         const letters = word.split('')
-                            return <div className="word">
+                            return <div className="word" key={`word_${word}_${wordIndex}`}>
                                 {letters.map((letter, index) => {
                                     if (
                                             lettersToMark.includes(letter) 
                                             || lettersToMark.includes(word.substring(index, index + 2)) 
-                                            || lettersToMark.includes(word.substring(index - 1, index + 1))) {
+                                            || lettersToMark.includes(word.substring(index - 1, index + 1))
+                                            || lettersToMark.includes(word.substring(index , index + 3))
+                                            || lettersToMark.includes(word.substring(index - 1, index + 2))
+                                            || lettersToMark.includes(word.substring(index - 2, index + 1))    
+                                        ) {
                                         return (
-                                            <>
+                                            <span key={`letter_mark_${letter}_${index}`}>
                                                 {wordIndex !== 0 && index === 0 && <span>, </span>}
-                                                <span key={`letter_mark_${word}_${index}`} className="marked">
+                                                <span className="marked">
                                                     {letter}
                                                 </span>
-                                            </>)
+                                            </span>)
                                     } else {
                                         return (
-                                        <>
+                                        <span key={`letter_mark_${letter}_${index}`}>
                                             {wordIndex !== 0 && index === 0 && <span>, </span>}
-                                            <span key={`letter_mark_${word}_${index}`}>
+                                            <span  className="char">
                                                 {letter}
                                             </span>
-                                        </>)
+                                        </span>)
                                     }
                                 })}
                             </div>
