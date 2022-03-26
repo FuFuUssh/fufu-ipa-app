@@ -264,7 +264,7 @@ const IPA_SOUNDS = [
         tags: ['z']
     },
     {
-        id: 'θ',
+        id: 'th',
         name: 'θ',
         examples: {
             lettersToMark: ['th'],
@@ -284,10 +284,10 @@ const IPA_SOUNDS = [
         tags: ['th']
     },
     {
-        id: 'ð',
+        id: 'dth',
         name: 'ð',
         examples: {
-            lettersToMark: ['th'],
+            lettersToMark: ['th', 'the'],
             words: ['that', 'bathe']
         },
         type: {
