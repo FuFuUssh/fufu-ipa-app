@@ -29,7 +29,7 @@ export default function SignUp() {
         
         if (passwordRef.current.value !== passwordConfirmRef.current.value) return setSignUpError('Passwords do not match')
         if (passwordRef.current.value.length < 6 || passwordRef.current.value > 20) return setSignUpError('Password must be between 6 and 20 characters')
-
+        console.log('here')
         dispatch(signUp(emailRef.current.value, passwordRef.current.value))
 
     }
