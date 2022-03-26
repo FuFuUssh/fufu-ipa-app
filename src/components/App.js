@@ -1,3 +1,4 @@
+import '../styles/App.css'
 import Dashboard from './Dashboard';
 import Header from './Header';
 import { useState, useEffect } from 'react'
@@ -8,6 +9,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch } from 'react-redux';
 import { removeUser, setUser } from '../redux/actions/userActions';
 import LogIn from './authentication/LogIn';
+import ResetPassword from './authentication/ResetPassword';
 
 function App() {
   const [filterBarOpen, setFilterBarOpen] = useState(false)
@@ -39,6 +41,7 @@ function App() {
       <Route path="/" element={<><Header filterBarOpen={filterBarOpen} setFilterBarOpen={setFilterBarOpen} /><Dashboard /></>}/>
       <Route path="/signup" element={<SignUp />} />
       <Route path="/login" element={<LogIn />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
     </Routes>
     <div id="modal-display"></div>
     </>
