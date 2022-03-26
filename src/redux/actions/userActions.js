@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth"
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail, signOut } from "firebase/auth"
 import { auth } from "../../firebase"
 
 const ACTIONS = {
@@ -16,6 +16,12 @@ const ACTIONS = {
     USER_LOGOUT_START: 'user-log-out-start',
     USER_LOGOUT_SUCCESS: 'user-log-out-success',
     USER_LOGOUT_FAIL: 'user-log-out-fail',
+
+    USER_RESET_PASSWORD_START: 'user-reset-password-start',
+    USER_RESET_PASSWORD_SUCCESS: 'user-reset-password-success',
+    USER_RESET_PASSWORD_FAIL: 'user-reset-password-fail',
+    
+    RESET_MESSAGE: 'reset-message'
 }
 
 export function signUp(email, password) {
@@ -51,6 +57,24 @@ export function logOut() {
         } catch {
             dispatch({ type: ACTIONS.USER_LOGOUT_FAIL })
         }
+    }
+}
+
+export function resetPassword(email) {
+    return async function (dispatch) {
+        try {
+            dispatch({ type: ACTIONS.USER_RESET_PASSWORD_START })
+            await sendPasswordResetEmail(auth, email)
+            dispatch({ type: ACTIONS.USER_RESET_PASSWORD_SUCCESS })
+        } catch {
+            dispatch({ type: ACTIONS.USER_RESET_PASSWORD_FAIL })
+        }
+    }
+}
+
+export function resetMessage() {
+    return {
+        type: ACTIONS.RESET_MESSAGE
     }
 }
 
