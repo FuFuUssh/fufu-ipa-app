@@ -5,7 +5,7 @@ import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { useDispatch, useSelector } from 'react-redux'
 import { logIn } from '../../redux/actions/userActions'
-import { useNavigate, Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function LogIn() {
     const userStatus = useSelector(state => state.userStatus)
@@ -48,8 +48,9 @@ export default function LogIn() {
                     <input type="password" id="password" placeholder="Enter your password" ref={passwordRef} required={true}/>
                 </div>
                 <button className="form-submit-btn" type="submit" disabled={loading}>Log In</button>
-                <p className="sub-text">Don't have an account? <Link to="/signup">Signup</Link> </p>
+                <p className='sub-text'>Forgot your password? <Link to="/reset-password" className="nav-link">Reset now</Link></p>
             </form>
+            <p className='sub-text outside-form'>Don't have an account? <Link to="/signup" className="nav-link">Signup</Link></p>
             {loading && 
                 <div className="spinner-container">
                     <FontAwesomeIcon className="spinner" icon={faSpinner} />

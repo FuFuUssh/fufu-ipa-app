@@ -5,7 +5,7 @@ import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { useDispatch, useSelector } from 'react-redux'
 import { signUp } from '../../redux/actions/userActions'
-import { useNavigate, Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function SignUp() {
     const userStatus = useSelector(state => state.userStatus)
@@ -56,7 +56,7 @@ export default function SignUp() {
                     <input type="password" id="passwordConfirm" placeholder="Confirm your password" ref={passwordConfirmRef} required={true}/>
                 </div>
                 <button className="form-submit-btn" type="submit" disabled={loading}>Create Account</button>
-                <p className="sub-text">Already have an account? <Link to="/login">Login</Link> </p>
+                <p className="sub-text">Already have an account? <Link to="/login" className="nav-link">Login</Link></p>
             </form>
             {loading && 
                 <div className="spinner-container">
