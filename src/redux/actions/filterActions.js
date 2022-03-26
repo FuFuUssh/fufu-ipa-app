@@ -92,7 +92,7 @@ export function searchSound(string) {
     const searchedSounds = IPA_SOUNDS.filter(sound => {
         return sound.tags.some(tag => {
             console.log(tag, string)
-            return tag === string
+            return tag.toLowerCase() === string.toLowerCase()
         })
     })
 
