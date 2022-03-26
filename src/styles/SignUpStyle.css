@@ -19,6 +19,7 @@
     background-color: white;
     text-align: center;
     margin: 3rem auto;
+    margin-bottom: 1rem;
 }
 
 .auth-section .form .form-title {
@@ -112,7 +113,28 @@
 }
 
 .sub-text {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+}
+
+.sub-text.outside-form {
+    margin: 1rem auto;
+    color: white;
+    text-align: center;
+}
+
+.sub-text > .nav-link {
+    color: var(--theme-color);
+    margin-left: 0.25rem;
+    display: inline-block;
+    transition: transform 250ms ease-in-out;
+}
+
+.sub-text > .nav-link:hover {
+    transform: translateY(-3px);
+}
+
+.sub-text.outside-form .nav-link {
+    color: var(--secondary-color);
 }
 
 @keyframes spinner {
