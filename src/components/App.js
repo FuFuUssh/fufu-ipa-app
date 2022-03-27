@@ -1,4 +1,3 @@
-import '../styles/App.css'
 import Dashboard from './Dashboard';
 import Header from './Header';
 import { useState, useEffect } from 'react'
