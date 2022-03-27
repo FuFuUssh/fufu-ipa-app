@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 7rem;
-    overflow: clip;
+    overflow-x: clip;
 }
 
 .logo-container {
@@ -91,6 +91,52 @@
     color: rgb(231, 231, 231);
 }
 
+.profile-btns-container {
+    position: relative;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.profile-dropdown-btn {
+    position: relative;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    transform: translateY(-5px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
+}
+
+.profile-dropdown.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.profile-dropdown .profile-btn {
+    color: #333;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+}
+
+.profile-dropdown .profile-btn:hover {
+    color: #dadada;
+    background-color: #333;
+}
+
+
 @media screen and (max-width: 995px) {
     .header {
         padding: 0.75rem 2rem;
@@ -128,6 +174,8 @@
         gap: 0.25rem;
     }
 }
+
+
 
 @media screen and (max-width: 450px) {
     .header {

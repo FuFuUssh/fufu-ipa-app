@@ -22,7 +22,7 @@
     margin-bottom: 1rem;
 }
 
-.auth-section .form .form-title {
+.auth-section .form .form-title, .auth-section .profile-title {
     color: hsl(200, 100%, 29%);
     font-size: 2rem;
 }
@@ -135,6 +135,26 @@
 
 .sub-text.outside-form .nav-link {
     color: var(--secondary-color);
+}
+
+.auth-back-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--theme-color);
+    color: white;
+    border-radius: 0.25rem;
+    font-size: 1.1rem;
+    transition: background-color 250ms ease-in-out;
+}
+
+.auth-back-btn:hover {
+    background-color:hsl(200, 100%, 50%);
+}
+
+.auth-back-btn:active {
+    background-color: hsl(200, 100%, 24%);
 }
 
 @keyframes spinner {

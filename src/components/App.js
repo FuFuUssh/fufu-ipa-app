@@ -1,3 +1,4 @@
+import '../styles/App.css'
 import Dashboard from './Dashboard';
 import Header from './Header';
 import { useState, useEffect } from 'react'
@@ -6,9 +7,12 @@ import { Routes, Route } from 'react-router-dom'
 import SignUp from './authentication/SignUp';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch } from 'react-redux';
-import { removeUser, setUser } from '../redux/actions/userActions';
+import { getProfileInformation, removeUser, setUser } from '../redux/actions/userActions';
 import LogIn from './authentication/LogIn';
 import ResetPassword from './authentication/ResetPassword';
+import Profile from './authentication/Profile';
+import UpdateProfile from './authentication/UpdateProfile';
+import BeforeUpdateConfirm from './authentication/BeforeUpdateConfirm';
 
 function App() {
   const [filterBarOpen, setFilterBarOpen] = useState(false)
@@ -16,13 +20,14 @@ function App() {
 
   useEffect(() => {
       window.addEventListener('click', checkFilterClick)
-
       return () => window.removeEventListener('click', checkFilterClick)
   }, [])
   
   onAuthStateChanged(auth, user => {
     if (user) {
       dispatch(setUser(user))
+      console.log(user.uid)
+      dispatch(getProfileInformation(user.uid))
     } else {
       dispatch(removeUser())
     }
@@ -41,6 +46,9 @@ function App() {
       <Route path="/signup" element={<SignUp />} />
       <Route path="/login" element={<LogIn />} />
       <Route path="/reset-password" element={<ResetPassword />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/confirm-account" element={<BeforeUpdateConfirm />} />
+      <Route path="/update-profile" element={<UpdateProfile />} />
     </Routes>
     <div id="modal-display"></div>
     </>

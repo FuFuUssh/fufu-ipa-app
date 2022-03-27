@@ -1,0 +1,173 @@
+.profile-card {
+    width: 70%;
+    max-width: 600px;
+    height: 400px;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card .profile-title {
+    text-align: center;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 0.5rem;
+}
+
+.card-left-side {
+    width: 60%;
+}
+
+.card-left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 4rem;
+}
+
+.card-left-side .profile-image-container {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card-left-side .profile-image-container::before, .card-left-side .profile-image-container::after {
+    --rotation: 0deg;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid black;
+    transform: rotate(var(--rotation));
+    transition: transform 1000ms ease-in-out;
+}
+
+.card-left-side .profile-image-container::before {
+    width: 8rem;
+    height: 8rem;
+    background-color: transparent;
+    border-left-color: transparent;
+}
+
+.card-left-side .profile-image-container::after {
+    width: 9rem;
+    height: 9rem;
+    background-color: transparent;
+    border-right-color: transparent;
+}
+
+.card-left-side .profile-image-container:hover::before {
+    --rotation: 180deg;
+}
+
+.card-left-side .profile-image-container:hover::after {
+    --rotation: -180deg;
+}
+
+.card-left-side .profile-image-container .profile-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.card-left-side .profile-image-container .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-left-side .profile-image-container .plus-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+    color: grey;
+    background-color: lightgrey;
+    border-radius: 50%;
+    transition: opacity 200ms ease-in-out;
+}
+
+.card-left-side .profile-image-container:hover .plus-container {
+    opacity: 0.7;
+}
+
+.profile-text-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.profile-text-container .profile-text {
+    color: black;
+    font-weight: 600;
+}
+
+.profile-btn-grid {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-btn-grid .profile-btn {
+    padding: 0.5rem 1.5rem;
+    background-color: var(--theme-color);
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    width: 10rem;
+    transition: 250ms ease-in-out;
+}
+
+.profile-btn-grid .profile-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+}
+
+.profile-btn.auth-back-btn {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.card-right-side {
+    width: 40%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+}
+
+.card-right-side .info-box {
+    width: 100%;
+    border-left: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+
+    background-color: rgba(0,0,0,0.1);
+}
+
+.card-right-side .info-box:last-child {
+    border-bottom: none;
+}
