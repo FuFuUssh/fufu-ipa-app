@@ -171,3 +171,28 @@
 .card-right-side .info-box:last-child {
     border-bottom: none;
 }
+
+
+@media screen and (max-width: 999px) {
+    
+}
+
+@media screen and (max-width: 670px) {
+    .profile-card {
+        height: max-content;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .card-right-side {
+        width: 100%;
+    }    
+}
+
+@media screen and (max-width: 450px) {
+    .profile-card {
+        height: max-content;
+        flex-direction: column;
+        width: 95%;
+    }
+}
