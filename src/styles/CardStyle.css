@@ -3,6 +3,7 @@
     height: 160px;
     perspective: 1000px;
     cursor: pointer;
+    user-select: none;
 }
 
 .ipa-card {
